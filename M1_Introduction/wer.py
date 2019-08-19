@@ -6,8 +6,8 @@ def string_edit_distance(ref=None, hyp=None):
     if ref is None or hyp is None:
         RuntimeError("ref and hyp are required, cannot be None")
 
-    x = ref
-    y = hyp
+    x = ref.split(" ")
+    y = hyp.split(" ")
     tokens = len(x)
     if (len(hyp)==0):
         return (tokens, tokens, tokens, 0, 0)
